@@ -1,0 +1,41 @@
+admin
+Username: AdminTontine2021
+E-mail: fernandognangle55@gmail.com
+password:Soutenance@2021
+
+UserSimple
+Magicien
+Power2021
+
+Initiateur 
+
+Nicodeme
+Date2021
+Tontine Succès
+
+Agent terrain
+
+Phillipe
+Gerard2021
+riche@gmail.com
+
+Adhérent
+Royal
+Regne2021
+puissance@gmail.com
+
+Fournisseur
+Marc
+Godonou2021
+Loyal@gmail.com
+
+Initiateur 2 
+Stanislas
+Proges2021
+stanislas@gmail.com
+
+
+New super admin
+AdminTontine2022
+fernandogafbj@gmail.com
+password: soutenance2022

@@ -1,0 +1,2414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Aug 2021 19:37:00 GMT -->
+<head>
+    {%load static%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="stylesheet" href="{% static '' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/images/favicon.png' %}">
+    <title>E-Adogbè Tontine</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="{% static '/assets/node_modules/morrisjs/morris.css' %}" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="{% static '/assets/node_modules/toast-master/css/jquery.toast.css' %}" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="{% static 'dist/css/style.min.css' %}" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="{% static 'dist/css/pages/dashboard1.css' %}" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="skin-megna fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label">E-Adogbè</p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Dark Logo icon -->
+                            <img src="{% static 'assets/images/logo-icon.png' %}" alt="homepage" class="dark-logo" />
+                            <!-- Light Logo icon -->
+                            <img src="{% static 'assets/images/logo-light-icon.png'%}" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <span class="hidden-xs"><span class="font-bold">E-</span>ADÔGBÊ</span>
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav me-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-md-none waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark" href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Rechercher & entrer">
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="ti-email"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end mailbox animated bounceInDown">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">Notifications</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="btn btn-danger btn-circle text-white"><i class="fa fa-link"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new admin!</span> <span class="time">9:30 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="btn btn-success btn-circle text-white"><i class="ti-calendar"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="btn btn-info btn-circle text-white"><i class="ti-settings"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this template as you want</span> <span class="time">9:08 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="btn btn-primary btn-circle"><i class="ti-user"></i></div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="javascript:void(0);"> <strong>Check all notifications</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- Messages -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="#" id="2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="icon-note"></i>
+                                <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-end animated bounceInDown" aria-labelledby="2">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">You have 4 new messages</div>
+                                    </li>
+                                    <li>
+                                        <div class="message-center">
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="user-img"> <img src="{% static 'assets/images/users/1.jpg'%}" alt="user" class="img-circle"> <span class="profile-status online pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:30 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="user-img"> <img src="{% static 'assets/images/users/2.jpg'%}" alt="user" class="img-circle"> <span class="profile-status busy pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Sonu Nigam</h5> <span class="mail-desc">I've sung a song! See you at</span> <span class="time">9:10 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="user-img"> <img src="{% static 'assets/images/users/3.jpg'%}" alt="user" class="img-circle"> <span class="profile-status away pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Arijit Sinh</h5> <span class="mail-desc">I am a singer!</span> <span class="time">9:08 AM</span> </div>
+                                            </a>
+                                            <!-- Message -->
+                                            <a href="javascript:void(0)">
+                                                <div class="user-img"> <img src="{% static 'assets/images/users/4.jpg'%}" alt="user" class="img-circle"> <span class="profile-status offline pull-right"></span> </div>
+                                                <div class="mail-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="nav-link text-center link" href="javascript:void(0);"> <strong>See all e-Mails</strong> <i class="fa fa-angle-right"></i> </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- mega menu -->
+                        <!-- ============================================================== -->
+                        
+                        <!-- ============================================================== -->
+                        <!-- End mega menu -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="{% static 'assets/images/users/1.jpg'%}" alt="user" class=""> <span class="hidden-md-down">Zlatan &nbsp;<i class="fa fa-angle-down"></i></span> </a>
+                            <div class="dropdown-menu dropdown-menu-end animated flipInY">
+                                <!-- text-->
+                                <a href="pages-profile.html" class="dropdown-item"><i class="ti-user"></i> Mon Profile</a>
+                                <!-- text-->
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-wallet"></i> Mon historique</a>
+                                <!-- text-->
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-email"></i> Messages</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="javascript:void(0)" class="dropdown-item"><i class="ti-settings"></i> Paramètre du compte</a>
+                                <!-- text-->
+                                <div class="dropdown-divider"></div>
+                                <!-- text-->
+                                <a href="login.html" class="dropdown-item"><i class="fa fa-power-off"></i>Déconnexion</a>
+                                <!-- text-->
+                            </div>
+                        </li>
+                        <!-- ============================================================== -->
+                        <!-- End User Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item right-side-toggle"> <a class="nav-link  waves-effect waves-light" href="javascript:void(0)"><i class="ti-settings"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                {% include 'pages/_nav.html' %}
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+        <!-- ============================================================== -->
+        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Page wrapper  -->
+        <!-- ============================================================== -->
+        <div class="page-wrapper">
+            <!-- ============================================================== -->
+            <!-- Container fluid  -->
+            <!-- ============================================================== -->
+            <div class="container-fluid">
+                <!-- ============================================================== -->
+                <!-- Bread crumb and right sidebar toggle -->
+                <!-- ============================================================== -->
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Carnet</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-end">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb justify-content-end">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Accueil</a></li>
+                                <li class="breadcrumb-item active">Carnet</li>
+                            </ol>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title m-b-0">Le carnet de tontine de l'adhérent <span style="color: coral;"> {{ paiement.nom_adhérent.user.username }} Carnet N° {{ paiement.num_carnet }}</span></h4> <br>
+                                 <h4>
+                                     Nombre de mise déjà éffectué : {{ nbr }} fois 
+                                 </h4> 
+                                 <br>
+                                 <center>
+                                    {% if niveau.number == 1 %}
+                                    <h3 style="color: brown;"> Mois n° 1 </h3>
+                                {%endif%}
+                                {% if niveau.number == 2 %}
+                                    <h3 style="color: brown;"> Mois n° 2 </h3>
+                                {%endif%}
+                                {% if niveau.number == 3 %}
+                                    <h3 style="color: brown;"> Mois n° 3 </h3>
+                                {%endif%}
+                                {% if niveau.number == 4 %}
+                                    <h3 style="color: brown;"> Mois n° 4 </h3>
+                                {%endif%}
+                                {% if niveau.number == 5 %}
+                                    <h3 style="color: brown;"> Mois n° 5 </h3>
+                                {%endif%}
+                                {% if niveau.number == 6 %}
+                                    <h3 style="color: brown;"> Mois n° 6 </h3>
+                                {%endif%}
+                                {% if niveau.number == 7 %}
+                                    <h3 style="color: brown;"> Mois n° 7 </h3>
+                                {%endif%}
+                                {% if niveau.number == 8 %}
+                                    <h3 style="color: brown;"> Mois n° 8 </h3>
+                                {%endif%}
+                                {% if niveau.number == 9 %}
+                                    <h3 style="color: brown;"> Mois n° 9 </h3>
+                                {%endif%}
+                                {% if niveau.number == 10 %}
+                                    <h3 style="color: brown;"> Mois n° 10 </h3>
+                                {%endif%}
+                                {% if niveau.number == 11 %}
+                                    <h3 style="color: brown;"> Mois n° 11 </h3>
+                                {%endif%}
+                                {% if niveau.number == 12 %}
+                                    <h3 style="color: brown;"> Mois n° 12 </h3>
+                                {%endif%}
+                                 </center>
+                                
+                            
+                                
+                             
+                                <div class="table-responsive">
+                                    {% if niveau.number == 1 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                {% if n == 1 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 2 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 3 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 4 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 5 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 6 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 7 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 8 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 9 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% if n == 10 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 11 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 12 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 13 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 14 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 15 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 16 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 17 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 18 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 19 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 20 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 21 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 22 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 23 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 24 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 25 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 26 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 27 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 28 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 29 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 30 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 31 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                            
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 2 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                {% if n == 32 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 33 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 34 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 35 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 36 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 37 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 38 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 39 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 40 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% if n == 41 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 42 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 43 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 44 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 45 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 46 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 47 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 48 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 49 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 50 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 51 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 52 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 53 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 54 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 55 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 56 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 57 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 58 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 59 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 60 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 61 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 62 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 3 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                {% if n == 63 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 64 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 65 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 66 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 67 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 68 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 69 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 70 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 71 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5</td>
+                                                {% endif %}
+                                                {% if n == 72 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 73 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 74 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 75 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 76 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 77 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 78 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 79 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 80 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 81 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 82 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 83 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 84 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 85 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 86 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 87 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+
+                                                {% if n == 88 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 89 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 90 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 91 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 92 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 93 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 4 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 94 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 95 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 96 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 97 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 98 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 99 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 100 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 101 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 102 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 103 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 104 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 105 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 106 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 107 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 108 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 109 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 110 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 111 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 112 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 113 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 114 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 115 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 116 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 117 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n ==  118 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 119 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 120 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 121 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 122 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 123 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 124 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 5 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 125 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 126 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 127 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 128 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 129 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 130 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 131 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 132 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 133 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 134 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 135 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 136 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 137 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 138 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 139 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 140 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 141 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 142 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 143 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 144 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 145 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 146 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 147 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 148 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 149 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  150 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 151 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 152 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 153 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 154 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 155 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 6 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 156 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 157 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 158 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 159 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 160 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 161 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 162 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 163 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 164 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 165 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 166 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 167 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 168 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 169 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 170 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 171 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 172 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 173 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 174 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 175 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 176 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 177 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 178 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 179 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 180 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  181 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 182 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 183 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 184 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 185 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 186 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 7 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 187 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 188 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 189 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 190 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 191 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 192 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 193 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 194 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 195 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 196 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 197 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 198 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 199 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 200 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 201 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 202 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 203 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 204 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 205 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 206 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 207 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 208 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 209 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 210 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 211 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  212 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 213 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 214 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 215 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 216 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 217 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 8 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 218 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 219 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 220 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 221 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 222 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 223 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 224 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 225 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 226 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 227 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 228 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 229 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 230 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 231 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 232 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 233 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 234 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 235 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 236 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 237 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 238 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 239 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 240 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 241 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 242 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  243 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 244 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 245 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 246 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 247 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 248 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 9 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 249 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 250 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 251 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 252 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 253 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 254 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 255 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 256 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 257 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 258 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 259 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 260 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 261 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 262 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 263 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 264 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 265 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 266 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 267 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 268 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 269 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 270 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 271 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 272 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 273 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  274 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 275 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 276 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 277 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 278 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 279 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 10 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 280 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 281 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 282 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 283 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4</td>
+                                                {% endif %}
+                                                {% if n == 284 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 285 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 286 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 287 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 288 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 289 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 290 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 291 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 292 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 293 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 294 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 295 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 296 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 297 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 298 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 299 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 300 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 301 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 302 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 303 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 304 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  305 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 306 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 307 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 308 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 309 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 310 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 11 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 311%}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 312 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 313 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 314 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 315 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 316 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 317 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 318 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 319 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 320 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 321 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 322 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>                                                {% endif %}
+                                                {% if n == 323 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 324 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 325 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 326 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 327 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 328 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 329 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 330 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 331 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 332 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 333 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 334 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 335 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  336 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 337 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 338 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 339 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 340 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 341 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                   {% if niveau.number == 12 %}
+                                   <center>
+                                    
+                                    <table width="50%">
+                                        
+                                        
+                                        <tbody>
+                                            <tr >
+                                                {% for n in mise_list %}
+                                                
+                                                {% if n == 342 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">1 </td>
+                                                {% endif %}
+                                                {% if n == 343 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">2 </td>
+                                                {% endif %}
+                                                {% if n == 344 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">3 </td>
+                                                {% endif %}
+                                                {% if n == 345 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">4 </td>
+                                                {% endif %}
+                                                {% if n == 346 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">5 </td>
+                                                {% endif %}
+                                               
+                                                {% endfor%}
+
+                                               
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 347 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">6</td>
+                                                {% endif %}
+                                                {% if n == 348 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">7</td>
+                                                {% endif %}
+                                                {% if n == 349 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">8</td>
+                                                {% endif %}
+                                                {% if n == 350 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">9</td>
+                                                {% endif %}
+                                                {% if n == 351 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">10</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+
+                                                
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 352 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">11</td>
+                                                {% endif %}
+                                                {% if n == 353 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">12</td>
+                                                {% endif %}
+                                                {% if n == 354 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">13</td>
+                                                {% endif %}
+                                                {% if n == 355 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">14</td>
+                                                {% endif %}
+                                                {% if n == 356 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">15</td>
+                                                {% endif %}
+                                                
+                                                {% endfor %}
+
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 357 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">16</td>
+                                                {% endif %}
+                                                {% if n == 358 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">17</td>
+                                                {% endif %}
+                                                {% if n == 359 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">18</td>
+                                                {% endif %}
+                                                {% if n == 360 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">19</td>
+                                                {% endif %}
+                                                {% if n == 361 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">20</td>
+                                                {% endif %}
+                                               
+                                              
+                                                {%endfor%}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n == 362 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">21</td>
+                                                {% endif %}
+                                                {% if n == 363 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">22</td>
+                                                {% endif %}
+                                                {% if n == 364 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">23</td>
+                                                {% endif %}
+                                                {% if n == 365 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">24</td>
+                                                {% endif %}
+                                                {% if n == 366 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">25</td>
+                                                {% endif %}
+                                                
+                                               
+                                                {% endfor %}
+                                                
+
+                                            </tr>
+                                            <tr>
+                                                {% for n in mise_list %}
+                                                {% if n ==  367 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">26</td>
+                                                {% endif %}
+                                                {% if n == 368 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">27</td>
+                                                {% endif %}
+                                                {% if n == 369 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">28</td>
+                                                {% endif %}
+                                                {% if n == 370 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">29</td>
+                                                {% endif %}
+                                                {% if n == 371 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">30</td>
+                                                {% endif %}
+                                                
+                                                
+                                                {% endfor %}
+
+                                             
+                                                
+                                                
+
+                                            </tr>
+                                            {% for n in mise_list %}
+
+                                            <tr style="border-bottom: none;">
+                                                {% if n == 372 %}
+                                                <td><img src="{% static 'assets/images/icone_ok.png'%}" alt="user" class="img-circle">31</td>
+                                                {% endif %}
+                                            </tr>
+                                            {% endfor %}
+                                           
+                                        </tbody>
+                                    </table>
+                                    
+                                   </center>
+                                   {% endif %}
+
+                                  
+
+
+                                </div>
+                                <div class="pagination" style="margin-left: 35%; margin-top: 10px;">
+                                    <span class="step-links">
+                                        {% if niveau.has_previous %}
+                                            <a href="?page=1">&laquo; Premiière</a>
+                                            <a href="?page={{ niveau.previous_page_number }}">Précédente</a>
+                                        {% endif %}
+                                
+                                        <span class="current">
+                                            Page {{ niveau.number }} of {{ niveau.paginator.num_pages }}.
+                                        </span>
+                                
+                                        {% if niveau.has_next %}
+                                            <a href="?page={{ niveau.next_page_number }}">Suivante</a>
+                                            <a href="?page={{ niveau.paginator.num_pages }}">Dernière &raquo;</a>
+                                        {% endif %}
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="https://www.wrappixel.com/" style="float: right;">WrapPixel</a>
+
+                    </div>
+
+                    
+                </div>
+                <!-- /.row -->
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
+                <!-- Right sidebar -->
+                <!-- ============================================================== -->
+                <!-- .right-sidebar -->
+                <div class="right-sidebar">
+                    <div class="slimscrollright">
+                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="r-panel-body">
+                            <ul id="themecolors" class="m-t-20">
+                                <li><b>With Light sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-red" class="red-theme">3</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme">4</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme">5</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme working">6</a></li>
+                                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme">10</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
+                                <li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
+                            </ul>
+                            <ul class="m-t-20 chatonline">
+                                <li><b>Chat option</b></li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/1.jpg '%}" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/2.jpg'%}" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/3.jpg'%}" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/4.jpg'%}" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/5.jpg'%}" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/6.jpg'%}" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/7.jpg'%}" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)"><img src="{% static 'assets/images/users/8.jpg'%}" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Right sidebar -->
+                <!-- ============================================================== -->
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Container fluid  -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page wrapper  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2021 Eliteadmin by themedesigner.in
+            <a href="https://www.wrappixel.com/">WrapPixel</a>
+
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <style>
+        
+        table,
+      td,
+      th {
+        padding: 10px;
+        border: 2px solid #1c87c9;
+        border-radius: 5px;
+        background-color: #e5e5e5;
+        text-align: center;
+      }
+    </style>
+    <script src="{% static 'assets/node_modules/jquery/dist/jquery.min.js'%}"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="{% static 'assets/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'%}"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="{% static 'dist/js/perfect-scrollbar.jquery.min.js'%}"></script>
+    <!--Wave Effects -->
+    <script src="{% static 'dist/js/waves.js'%}"></script>
+    <!--Menu sidebar -->
+    <script src="{% static 'dist/js/sidebarmenu.js'%}"></script>
+    <!--Custom JavaScript -->
+    <script src="{% static 'dist/js/custom.min.js'%}"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+    <!--morris JavaScript -->
+    <script src="{% static 'assets/node_modules/raphael/raphael-min.js'%}"></script>
+    <script src="{% static 'assets/node_modules/morrisjs/morris.min.js'%}"></script>
+    <script src="{% static 'assets/node_modules/jquery-sparkline/jquery.sparkline.min.js'%}"></script>
+    <!-- Popup message jquery -->
+    <script src="{% static 'assets/node_modules/toast-master/js/jquery.toast.js'%}"></script>
+    <!-- jQuery peity -->
+    <script src="{% static 'assets/node_modules/peity/jquery.peity.min.js'%}"></script>
+    <script src="{% static 'assets/node_modules/peity/jquery.peity.init.js'%}"></script>
+    <script src="{% static 'dist/js/Tableau de bord1.js'}%"></script>
+</body>
+
+
+<!-- Mirrored from eliteadmin.themedesigner.in/demos/bt4/hospital/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 Aug 2021 19:39:45 GMT -->
+</html>
